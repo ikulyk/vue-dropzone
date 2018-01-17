@@ -5,6 +5,8 @@
 
 <script>
 import awsEndpoint from '../services/urlsigner'
+import Dropzone from 'dropzone'
+
 export default {
   props: {
     id: {
@@ -184,7 +186,6 @@ export default {
       return
     }
     this.hasBeenMounted = true
-    let Dropzone = require('dropzone') //eslint-disable-line
     Dropzone.autoDiscover = false
     this.dropzone = new Dropzone(this.$refs.dropzoneElement, this.dropzoneSettings)
     let vm = this
